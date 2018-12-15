@@ -1,0 +1,41 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=MX Time Settings
+Name[ar]=MX إعدادات الوقت
+Name[ca]=MX Ajustaments de temps
+Name[de]=MX Zeiteinstellungen
+Name[el]=MX Ρυθμίσεις ώρας
+Name[es]=MX Ajustes de tiempo
+Name[fr]=MX Réglages de l'heure
+Name[it]=MX Impostazioni ora
+Name[ja]=MX 時間設定
+Name[kk]=MX Уақыт параметрлері
+Name[nl]=MX Tijdinstellingen
+Name[pl]=MX Ustawienia czasu
+Name[ru]=MX Настройки времени
+Name[sv]=MX Tidsinställningar
+Name[zh]=MX 时间设置
+
+Comment=A GUI for managing system date and time
+Comment[ar]=واجهة المستخدم الرسومية لإدارة 
+Comment[ca]=Una interfície gràfica d'usuari per a la gestió de la data i hora del sistema
+Comment[de]=Eine GUI für die Verwaltung von Systemdatum und -zeit
+Comment[el]=Ένα γραφικό περιβάλλον για τη διαχείριση ημερομηνία και ώρα συστήματος
+Comment[es]=Una interfaz gráfica de usuario para la gestión de la fecha y hora del sistema
+Comment[fr]=Une interface graphique pour gérer la date et l'heure du système
+Comment[it]=Una GUI per la gestione di data e ora del sistema
+Comment[ja]=システムの日付と時刻を管理するためのGUI
+Comment[kk]=жүйелік күн мен уақытын басқару үшін GUI
+Comment[nl]=Een grafische gebruikersomgeving om de systeemtijd en -datum in te stellen
+Comment[pl]=GUI do zarządzania datę i czas systemowy
+Comment[ru]=Графический интерфейс для управления системной даты и времени
+Comment[sv]=Ett grafiskt gränssnitt för att ställa in systemets datum och tid
+Comment[zh]=用于管理系统日期和时间的GUI
+
+Exec=su-to-root -X -c mx-timeset-gui
+Icon=mx-timeset-gui-icon
+Terminal=false
+NoDisplay=false
+Type=Application
+Categories=XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
+Encoding=UTF-8

@@ -1,0 +1,4 @@
+mx-timeset-gui: python-script-but-no-python-dep usr/bin/mx-timeset-gui
+mx-timeset-gui: latest-debian-changelog-entry-changed-to-native
+mx-timeset-gui: extra-license-file usr/share/doc/mx-timeset-gui/COPYING.gz
+mx-timeset-gui: binary-without-manpage usr/bin/mx-timeset-gui

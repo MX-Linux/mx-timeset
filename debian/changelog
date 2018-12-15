@@ -1,0 +1,61 @@
+mx-timeset-gui (16.12.2.mx17) mx; urgency=medium
+
+  * Rebuild for MX 17.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 02 Sep 2017 14:51:21 -0700
+
+mx-timeset-gui (16.12.2) mx; urgency=medium
+
+  * Fix the python script to display the current version in the "about" dialog.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sun, 11 Dec 2016 15:03:53 -0800
+
+mx-timeset-gui (16.12.1) mx; urgency=medium
+
+  * debian/control: conflict with and replace timeset-gui.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 10 Dec 2016 19:57:18 -0800
+
+mx-timeset-gui (16.12) mx; urgency=medium
+
+  * Fork to native MX package.
+  * Drop python as a B-D.
+  * Drop ${python:Depends} variable as a dependency.
+  * Add lintian overrides.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Fri, 09 Dec 2016 11:28:03 -0800
+
+timeset-gui (2.2-2mx15+4) mx; urgency=medium
+
+  * Drop makefile.patch; instead just make link to icon in usr/share/pixmaps.
+  * Add titlebar.patch to change what appears in titlebar.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Thu, 08 Dec 2016 08:54:42 -0800
+
+timeset-gui (2.2-2mx15+3) mx; urgency=medium
+
+  * debian/control: add menu to Depends to provide "su-to-root".
+  * debian/rules: remove the makefile that gets installed by itself for some
+    unknown reason.
+  * Refresh makefile.patch; the section that fixes clean is removed in favor of
+    an override in the rules file.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Tue, 06 Dec 2016 08:43:39 -0800
+
+timeset-gui (2.2-2mx15+2) mx; urgency=medium
+
+  * Add desktop_file.patch.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Sat, 03 Dec 2016 11:43:27 -0800
+
+timeset-gui (2.2-2mx15+1) mx; urgency=medium
+
+  * Remove dependency on timeset.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 30 Nov 2016 17:40:20 -0800
+
+timeset-gui (2.2-1mx15+1) mx; urgency=low
+
+  * Initial packaging.
+
+ -- Steven Pusser <stevep@mxlinux.org>  Wed, 30 Nov 2016 15:35:31 -0800
