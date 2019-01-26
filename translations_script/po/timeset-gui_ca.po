@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Eduard Selma <selma@tinet.cat>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-31 09:00-0500\n"
+"PO-Revision-Date: 2018-12-30 01:12+0000\n"
+"Last-Translator: Eduard Selma <selma@tinet.cat>, 2019\n"
+"Language-Team: Catalan (https://www.transifex.com/anticapitalista/teams/10162/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: mx-timeset-gui.py:38
+msgid "Warning!"
+msgstr "Atenció!"
+
+#: mx-timeset-gui.py:57
+msgid "Current date and time"
+msgstr "Data i hora actuals"
+
+#: mx-timeset-gui.py:78
+msgid "Known timezones"
+msgstr "Zones horàries conegudes"
+
+#: mx-timeset-gui.py:103 mx-timeset-gui.py:430
+msgid "Set system timezone"
+msgstr "Defineix la zona horària del sistema"
+
+#: mx-timeset-gui.py:106
+msgid ""
+"Enter the timezone. It should be like \n"
+"Continent/City - Europe/Berlin"
+msgstr ""
+"Entreu la zona horària. Hauria de de ser\n"
+"com Continent/Ciutat - Europa/Berlin "
+
+#: mx-timeset-gui.py:114
+msgid "Enable or disable NTP"
+msgstr "Activeu o desactiveu el NTP"
+
+#: mx-timeset-gui.py:115
+msgid "Enable"
+msgstr "Activa "
+
+#: mx-timeset-gui.py:115
+msgid "Disable"
+msgstr "Desactiva"
+
+#: mx-timeset-gui.py:117
+msgid ""
+"Enable or disable NTP usage.\n"
+"NTP stands for Network Time Protocol.\n"
+"If NTP is enabled, the system will periodically\n"
+"synchronize time from the network."
+msgstr ""
+"Activeu o desactiveu l'ús del NTP.\n"
+"NTP significa Network Time Protocol.\n"
+"Si s'activa NTP, el sistema sincronitzarà\n"
+"periòdicament l'hora amb la xarxa."
+
+#: mx-timeset-gui.py:123
+msgid "Control the hardware clock"
+msgstr "Controla el rellotge intern"
+
+#: mx-timeset-gui.py:124
+msgid "UTC"
+msgstr "UTC"
+
+#: mx-timeset-gui.py:124
+msgid "Local time"
+msgstr "Hora Local"
+
+#: mx-timeset-gui.py:126
+msgid "Set the hardware clock to use \n"
+msgstr "Definiu el rellotge intern a usar\n"
+
+#: mx-timeset-gui.py:133
+msgid "Hardware clock time"
+msgstr "Hora del rellotge intern"
+
+#: mx-timeset-gui.py:149
+msgid "Synchronize system time from hardware clock"
+msgstr "Sincronitza l'hora del sistema amb el rellotge intern"
+
+#: mx-timeset-gui.py:152
+msgid "Synchronize system time from the hardware clock. \n"
+msgstr "Sincronitza l'hora del sistema amb el rellotge intern\n"
+
+#: mx-timeset-gui.py:158
+msgid "Set system time"
+msgstr "Defineix l'hora del sistema"
+
+#: mx-timeset-gui.py:161
+msgid ""
+"Enter the time. The time may be formatted\n"
+"like this: 2013-11-18 09:12:45\n"
+"(using the template yyyy-mm-dd hh:mm)"
+msgstr ""
+"Entreu l'hora. Ha de tenir un format com\n"
+"aquest: 2018-11-18 09:12:45\n"
+"(useu la plantilla aaaa-mm-dd hh:mm)"
+
+#: mx-timeset-gui.py:177
+msgid "System time synchronized to hardware clock!"
+msgstr "Hora del sistema sincronitzada amb el rellotge intern!"
+
+#: mx-timeset-gui.py:192
+msgid "Hardware clock synchronized to system time!"
+msgstr "Rellotge intern sincronitzat amb l'hora del sistema!"
+
+#: mx-timeset-gui.py:221
+msgid "Hardware clock set to UTC!"
+msgstr "Rellotge intern definit a l'hora UTC!"
+
+#: mx-timeset-gui.py:245
+msgid "Hardware clock set to local time!"
+msgstr "Rellotge intern definit a l'hora local!"
+
+#: mx-timeset-gui.py:262 mx-timeset-gui.py:284
+msgid "ntpd service not found"
+msgstr "No he trobat el servei NTPD"
+
+#: mx-timeset-gui.py:264 mx-timeset-gui.py:286
+msgid ""
+"For this to work, ntpd needs to be present.\n"
+"Also, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\n"
+"This feature is not handled by this program."
+msgstr ""
+"Per funcionar, cal que estigui present el NTPD.\n"
+"També potser us cal editar el fitxer /etc/ntp.conf (o semblant), i llavors activar el dimoni NTP per engegar-se en arrencar.\n"
+"Aquesta característica no es gestiona amb aquest programa."
+
+#: mx-timeset-gui.py:271
+msgid "NTP enabled!"
+msgstr "NTP activat!"
+
+#: mx-timeset-gui.py:293
+msgid "NTP disabled!"
+msgstr "NTP desactivat!"
+
+#: mx-timeset-gui.py:304
+msgid "Could not find ntpdate"
+msgstr "No he trobat ntpdate"
+
+#: mx-timeset-gui.py:311
+msgid "Success! Time updated."
+msgstr "Èxit! Hora actualitzada."
+
+#: mx-timeset-gui.py:338
+msgid "Invalid timezone"
+msgstr "Zona horària no vàlida"
+
+#: mx-timeset-gui.py:345
+msgid "Timezone changed!"
+msgstr "La zona horària ha canviat!"
+
+#: mx-timeset-gui.py:369
+msgid "Time not entered correctly."
+msgstr "Hora entrada incorrectament."
+
+#: mx-timeset-gui.py:376
+msgid "Time changed!"
+msgstr "Hora canviada!"
+
+#: mx-timeset-gui.py:388
+msgid "A GUI to manage system date and time"
+msgstr "Una IGU per gestionar la dat i hora del sistema"
+
+#: mx-timeset-gui.py:395
+msgid "Time and Date Settings"
+msgstr "Paràmetres de Data i Hora"
+
+#: mx-timeset-gui.py:410
+msgid " 1. Show current date and time"
+msgstr "1. Mostra la data i hora actuals"
+
+#: mx-timeset-gui.py:414
+msgid "Show current date and time configuration"
+msgstr "Mostra la configuració de data i hora actuals"
+
+#: mx-timeset-gui.py:418
+msgid " 2. Show timezones"
+msgstr "2. Mostra les zones horàries"
+
+#: mx-timeset-gui.py:422
+msgid "Show known timezones"
+msgstr "Mostra les zones horàries conegudes"
+
+#: mx-timeset-gui.py:426
+msgid " 3. Set system timezone"
+msgstr "3. Estableix la zona horària del sistema"
+
+#: mx-timeset-gui.py:434
+msgid " 4. Synchronize time from the network"
+msgstr "4. Sincronitza l'hora des de la xarxa"
+
+#: mx-timeset-gui.py:438
+msgid "Synchronize time from the network using NTP"
+msgstr "Sincronitza l'hora de la xarxa usant NTP"
+
+#: mx-timeset-gui.py:442
+msgid " 5. Choose whether NTP is enabled"
+msgstr "5. Tria si s'activa el NTP"
+
+#: mx-timeset-gui.py:446
+msgid "Choose whether NTP (Network Time Protocol) is enabled"
+msgstr "Tria si s'activa o no el NTP (Network Time Protocol)"
+
+#: mx-timeset-gui.py:450
+msgid " 6. Hardware clock in UTC or local time"
+msgstr "6. Rellotge intern a UTC o bé Hora Local"
+
+#: mx-timeset-gui.py:455
+msgid "Control whether the hardware clock is in UTC or local time"
+msgstr "Controla si el rellotge intern va amb UTC o bé l'Hora Local"
+
+#: mx-timeset-gui.py:458
+msgid " 7. Read time from the hardware clock"
+msgstr "7. Llegeix l'hora del rellotge intern"
+
+#: mx-timeset-gui.py:462
+msgid "Read time from the hardware clock"
+msgstr "Llegeix l'hora del rellotge intern"
+
+#: mx-timeset-gui.py:466
+msgid " 8. Synchronize hardware clock to system time"
+msgstr "8. Sincronitza el Rellotge Intern amb l'hora del Sistema"
+
+#: mx-timeset-gui.py:470
+msgid "Synchronize hardware clock to system time"
+msgstr "Sincronitza el Rellotge Intern amb l'hora del Sistema"
+
+#: mx-timeset-gui.py:474
+msgid " 9. Synchronize system time to hardware clock"
+msgstr "9. Sincronitza l'hora del Sistema amb el Rellotge intern"
+
+#: mx-timeset-gui.py:478
+msgid "Synchronize system time to hardware clock time"
+msgstr "Sincronitza l'hora del Sistema amb el Rellotge intern"
+
+#: mx-timeset-gui.py:482
+msgid "10. Adjust the date and time manually"
+msgstr "10. Ajusta la data i l'hora manualment"
+
+#: mx-timeset-gui.py:486
+msgid "Set the date and time manually"
+msgstr "Defineix la data i l'hora manualment"
+
+#: mx-timeset-gui.py:490
+msgid "11. About"
+msgstr "11. Quant a"
+
+#: mx-timeset-gui.py:494
+msgid "About this program"
+msgstr "Quant a aquest programari"

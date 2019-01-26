@@ -114,7 +114,7 @@ class set_ntp_at_statup(Gtk.Dialog):
         Gtk.Dialog.__init__(self, _("Enable or disable NTP"), parent,
             Gtk.DialogFlags.MODAL, buttons=(_("Enable"), Gtk.ResponseType.OK, _("Disable"), Gtk.ResponseType.CANCEL))
         box = self.get_content_area()
-        label = Gtk.Label(_('Enable or disable NTP usage.\nNTP stands for Network Time Protocol.\nIf NTP is enabled the system will periodically\nsynchronize time from the network.'))
+        label = Gtk.Label(_('Enable or disable NTP usage.\nNTP stands for Network Time Protocol.\nIf NTP is enabled, the system will periodically\nsynchronize time from the network.'))
         box.add(label)
         self.show_all()
 
@@ -158,7 +158,7 @@ class set_time_manually(Gtk.Dialog):
         Gtk.Dialog.__init__(self, _("Set system time"), parent,
             Gtk.DialogFlags.MODAL, buttons=(Gtk.STOCK_OK, Gtk.ResponseType.OK, Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL))
         box = self.get_content_area()
-        label = Gtk.Label(_('Enter the time. The time may be formatted\nlike this: 2013-11-18 09:12:45\nor just yyyy-mm-dd hh:mm'))
+        label = Gtk.Label(_('Enter the time. The time may be formatted\nlike this: 2013-11-18 09:12:45\n(using the template yyyy-mm-dd hh:mm)'))
         box.add(label)
         self.entry = Gtk.Entry()
         box.add(self.entry)
@@ -261,7 +261,7 @@ class MainWindow(Gtk.Window):
                 else:
                     err = _('ntpd service not found')
             else:
-                err = _('For this to work ntpd needs to be present.\nFurthur you may need need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
+                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
                 dialog2.format_secondary_text("{0}".format(err))
@@ -283,7 +283,7 @@ class MainWindow(Gtk.Window):
                 else:
                     err = _('ntpd service not found')
             else:
-                err = _('For this to work ntpd needs to be present.\nFurthur you may need need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
+                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
                 dialog2.format_secondary_text("{0}".format(err))

@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# cyril cottet <cyrilusber2001@yahoo.fr>, 2018
+# Zorzi B. <nicost@net-c.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-31 09:00-0500\n"
+"PO-Revision-Date: 2018-12-30 01:12+0000\n"
+"Last-Translator: Zorzi B. <nicost@net-c.com>, 2019\n"
+"Language-Team: French (https://www.transifex.com/anticapitalista/teams/10162/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: mx-timeset-gui.py:38
+msgid "Warning!"
+msgstr "Attention!"
+
+#: mx-timeset-gui.py:57
+msgid "Current date and time"
+msgstr "Date et heure actuelles"
+
+#: mx-timeset-gui.py:78
+msgid "Known timezones"
+msgstr "Fuseaux horaires connus"
+
+#: mx-timeset-gui.py:103 mx-timeset-gui.py:430
+msgid "Set system timezone"
+msgstr "Définir le fuseau horaire du système"
+
+#: mx-timeset-gui.py:106
+msgid ""
+"Enter the timezone. It should be like \n"
+"Continent/City - Europe/Berlin"
+msgstr ""
+"Réglez le fuseau horaire. De la façon suivante \n"
+"Continent/Ville - Europe/Berlin"
+
+#: mx-timeset-gui.py:114
+msgid "Enable or disable NTP"
+msgstr "Activer ou désactiver NTP"
+
+#: mx-timeset-gui.py:115
+msgid "Enable"
+msgstr "Activer"
+
+#: mx-timeset-gui.py:115
+msgid "Disable"
+msgstr "Désactiver"
+
+#: mx-timeset-gui.py:117
+msgid ""
+"Enable or disable NTP usage.\n"
+"NTP stands for Network Time Protocol.\n"
+"If NTP is enabled, the system will periodically\n"
+"synchronize time from the network."
+msgstr ""
+"Activer ou désactiver utilisation NTP.\n"
+"NTP signifie Protocole d'Heure Réseau\n"
+"Si NTP est activé, le système opèrera périodiquement\n"
+"une synchronisation horaire depuis le réseau."
+
+#: mx-timeset-gui.py:123
+msgid "Control the hardware clock"
+msgstr "Gérer l'horloge matérielle"
+
+#: mx-timeset-gui.py:124
+msgid "UTC"
+msgstr "UTC"
+
+#: mx-timeset-gui.py:124
+msgid "Local time"
+msgstr "Temps local"
+
+#: mx-timeset-gui.py:126
+msgid "Set the hardware clock to use \n"
+msgstr "Définir l'horloge matérielle à utiliser \n"
+
+#: mx-timeset-gui.py:133
+msgid "Hardware clock time"
+msgstr "Heure de l'horloge matérielle"
+
+#: mx-timeset-gui.py:149
+msgid "Synchronize system time from hardware clock"
+msgstr "Synchroniser l'heure du système depuis l'horloge matérielle"
+
+#: mx-timeset-gui.py:152
+msgid "Synchronize system time from the hardware clock. \n"
+msgstr "Synchroniser l'heure du système depuis l'horloge matérielle. \n"
+
+#: mx-timeset-gui.py:158
+msgid "Set system time"
+msgstr "Définir l'heure du système"
+
+#: mx-timeset-gui.py:161
+msgid ""
+"Enter the time. The time may be formatted\n"
+"like this: 2013-11-18 09:12:45\n"
+"(using the template yyyy-mm-dd hh:mm)"
+msgstr ""
+"Renseignez date et heure. L'heure/date peut être saisie\n"
+"ainsi: 2013-11-18 09:12:45\n"
+"(en respectant le modèle aaaa-mm-jj hh:mm)"
+
+#: mx-timeset-gui.py:177
+msgid "System time synchronized to hardware clock!"
+msgstr "Heure système synchronisée sur l'horloge matérielle!"
+
+#: mx-timeset-gui.py:192
+msgid "Hardware clock synchronized to system time!"
+msgstr "Horloge matérielle synchronisée sur heure système!"
+
+#: mx-timeset-gui.py:221
+msgid "Hardware clock set to UTC!"
+msgstr "Horloge matérielle ajustée sur UTC!"
+
+#: mx-timeset-gui.py:245
+msgid "Hardware clock set to local time!"
+msgstr "Horloge matérielle ajustée sur heure locale!"
+
+#: mx-timeset-gui.py:262 mx-timeset-gui.py:284
+msgid "ntpd service not found"
+msgstr "Service ntpd non trouvé"
+
+#: mx-timeset-gui.py:264 mx-timeset-gui.py:286
+msgid ""
+"For this to work, ntpd needs to be present.\n"
+"Also, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\n"
+"This feature is not handled by this program."
+msgstr ""
+"ntpd requis pour le fonctionnement.\n"
+"D'autre part, vous devrez peut-être éditer le fichier\n"
+"/etc/ntp.conf (ou équivalent), et ensuite activer\n"
+"le lancement du démon ntp au démarrage.\n"
+"Cette fonctionnalité n'est pas prise en charge\n"
+"par ce programme."
+
+#: mx-timeset-gui.py:271
+msgid "NTP enabled!"
+msgstr "NTP activé!"
+
+#: mx-timeset-gui.py:293
+msgid "NTP disabled!"
+msgstr "NTP désactivé!"
+
+#: mx-timeset-gui.py:304
+msgid "Could not find ntpdate"
+msgstr "Impossible de trouver ntpdate"
+
+#: mx-timeset-gui.py:311
+msgid "Success! Time updated."
+msgstr "Réussi! Heure mise à jour."
+
+#: mx-timeset-gui.py:338
+msgid "Invalid timezone"
+msgstr "Fuseau horaire incorrect"
+
+#: mx-timeset-gui.py:345
+msgid "Timezone changed!"
+msgstr "Fuseau horaire modifié!"
+
+#: mx-timeset-gui.py:369
+msgid "Time not entered correctly."
+msgstr "Heure incorrectement renseignée."
+
+#: mx-timeset-gui.py:376
+msgid "Time changed!"
+msgstr "Heure modifiée!"
+
+#: mx-timeset-gui.py:388
+msgid "A GUI to manage system date and time"
+msgstr "Une Interface Graphique Utilisateur pour ajuster la date et l'heure"
+
+#: mx-timeset-gui.py:395
+msgid "Time and Date Settings"
+msgstr "Réglages Heure et Date"
+
+#: mx-timeset-gui.py:410
+msgid " 1. Show current date and time"
+msgstr " 1. Montrer la date et l'heure actuelles"
+
+#: mx-timeset-gui.py:414
+msgid "Show current date and time configuration"
+msgstr "Montrer les réglages pour la date et l'heure actuelles"
+
+#: mx-timeset-gui.py:418
+msgid " 2. Show timezones"
+msgstr "2. Montrer les fuseaux horaires"
+
+#: mx-timeset-gui.py:422
+msgid "Show known timezones"
+msgstr "Montrer les fuseaux horaires connus"
+
+#: mx-timeset-gui.py:426
+msgid " 3. Set system timezone"
+msgstr " 3. Régler le fuseau horaire du système"
+
+#: mx-timeset-gui.py:434
+msgid " 4. Synchronize time from the network"
+msgstr " 4. Synchroniser l'heure depuis le réseau"
+
+#: mx-timeset-gui.py:438
+msgid "Synchronize time from the network using NTP"
+msgstr "Synchroniser l'heure depuis le réseau en utilisant NTP"
+
+#: mx-timeset-gui.py:442
+msgid " 5. Choose whether NTP is enabled"
+msgstr " 5. Choisir si NTP est activé"
+
+#: mx-timeset-gui.py:446
+msgid "Choose whether NTP (Network Time Protocol) is enabled"
+msgstr "Choisir si NTP (Network Time Protocol) est activé"
+
+#: mx-timeset-gui.py:450
+msgid " 6. Hardware clock in UTC or local time"
+msgstr " 6. Horloge matérielle en UTC ou en heure locale"
+
+#: mx-timeset-gui.py:455
+msgid "Control whether the hardware clock is in UTC or local time"
+msgstr ""
+"Définir si l'horloge matérielle doit être ajustée en UTC ou en heure locale"
+
+#: mx-timeset-gui.py:458
+msgid " 7. Read time from the hardware clock"
+msgstr " 7. Lire l'heure depuis l'horloge matérielle"
+
+#: mx-timeset-gui.py:462
+msgid "Read time from the hardware clock"
+msgstr "Lire l'heure depuis l'horloge matérielle"
+
+#: mx-timeset-gui.py:466
+msgid " 8. Synchronize hardware clock to system time"
+msgstr " 8. Synchroniser l'horloge matérielle sur l'heure du système"
+
+#: mx-timeset-gui.py:470
+msgid "Synchronize hardware clock to system time"
+msgstr "Synchroniser l'horloge matérielle sur l'heure du système"
+
+#: mx-timeset-gui.py:474
+msgid " 9. Synchronize system time to hardware clock"
+msgstr " 9. Synchroniser l'heure du système sur l'horloge matérielle"
+
+#: mx-timeset-gui.py:478
+msgid "Synchronize system time to hardware clock time"
+msgstr "Synchroniser l'heure du système sur l'horloge matérielle"
+
+#: mx-timeset-gui.py:482
+msgid "10. Adjust the date and time manually"
+msgstr "10. Ajuster manuellement la date et l'heure"
+
+#: mx-timeset-gui.py:486
+msgid "Set the date and time manually"
+msgstr "Régler la date et l'heure manuellement"
+
+#: mx-timeset-gui.py:490
+msgid "11. About"
+msgstr "11. À propos"
+
+#: mx-timeset-gui.py:494
+msgid "About this program"
+msgstr "À propos de ce programme"
