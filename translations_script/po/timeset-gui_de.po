@@ -5,8 +5,8 @@
 # 
 # Translators:
 # Vinzenz Vietzke <vinz@vinzv.de>, 2018
-# Feh Ler <feh.ler@t-online.de>, 2018
 # Geoff Gigg <geoffgigg@hotmail.com>, 2018
+# Feh Ler <feh.ler@t-online.de>, 2018
 # delix02, 2019
 # 
 #, fuzzy
