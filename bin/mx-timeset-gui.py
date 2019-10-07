@@ -1,7 +1,7 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 ##
 #  timeset-gui - A GUI to manage system date and time
-#  Copyright (C) 2013-2015 Aaditya Bagga <aaditya_gnulinux@zoho.com>
+#  Copyright (C) 2013-2019 Aaditya Bagga <aaditya_gnulinux@zoho.com>
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -66,7 +66,7 @@ class on_show_current_date_and_time:
         else:
             sp = subprocess.Popen(shlex.split('date'), stdout=subprocess.PIPE)
         out, err = sp.communicate()
-        textbuffer.set_text("{0}".format(out))
+        textbuffer.set_text("{0}".format(out.decode()))
         window2.connect("destroy", lambda q: Gtk.main_quit())
         window2.show_all()
         Gtk.main()
@@ -92,7 +92,7 @@ class on_show_timezones:
             p1 = subprocess.Popen(shlex.split('find -L /usr/share/zoneinfo -mindepth 2 ! -path \'*/posix/*\' ! -path \'*/right/*\' -type f -printf "%P\n"'), stdout=subprocess.PIPE)
             sp = subprocess.Popen(["sort"], stdin=p1.stdout, stdout=subprocess.PIPE)
         out, err = sp.communicate()
-        textbuffer.set_text("{0}".format(out))
+        textbuffer.set_text("{0}".format(out.decode()))
 
         window2.connect("destroy", lambda q: Gtk.main_quit())
         window2.show_all()
@@ -139,7 +139,7 @@ class on_read_time_from_hw_clock:
         textbuffer = viewbox.get_buffer()
         sp = subprocess.Popen(shlex.split('/sbin/hwclock -D'), stdout=subprocess.PIPE)
         out, err = sp.communicate()
-        textbuffer.set_text("{0}".format(out))
+        textbuffer.set_text("{0}".format(out.decode()))
         window2.connect("destroy", lambda q: Gtk.main_quit())
         window2.show_all()
         Gtk.main()
@@ -170,12 +170,12 @@ class MainWindow(Gtk.Window):
         out, err = sp.communicate()
         if err:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, msg_warn)
-            dialog2.format_secondary_text("{0}".format(err))
+            dialog2.format_secondary_text("{0}".format(err.decode()))
             dialog2.run()
             dialog2.destroy()
         else:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, _("System time synchronized to hardware clock!"))
-            dialog2.format_secondary_text("{0}".format(out))
+            dialog2.format_secondary_text("{0}".format(out.decode()))
             dialog2.run()
             dialog2.destroy()
 
@@ -184,13 +184,13 @@ class MainWindow(Gtk.Window):
         out, err = sp.communicate()
         if err:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, msg_warn)
-            dialog2.format_secondary_text("{0}".format(err))
+            dialog2.format_secondary_text("{0}".format(err.decode()))
             dialog2.run()
             dialog2.destroy()
         else:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO,
                 Gtk.ButtonsType.OK, _("Hardware clock synchronized to system time!"))
-            dialog2.format_secondary_text("{0}".format(out))
+            dialog2.format_secondary_text("{0}".format(out.decode()))
             dialog2.run()
             dialog2.destroy()
 
@@ -214,7 +214,7 @@ class MainWindow(Gtk.Window):
                     out, err = sp.communicate()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
@@ -238,7 +238,7 @@ class MainWindow(Gtk.Window):
                     out, err = sp.communicate()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
@@ -259,17 +259,17 @@ class MainWindow(Gtk.Window):
                     sp = subprocess.Popen(shlex.split('rc-update add ntpd'), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     out, err = sp.communicate()
                 else:
-                    err = _('ntpd service not found')
+                    err = _('ntpd service not found').encode()
             else:
-                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
+                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.').encode()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, _("NTP enabled!"))
-                dialog2.format_secondary_text("{0}".format(out))
+                dialog2.format_secondary_text("{0}".format(out.decode()))
                 dialog2.run()
                 dialog2.destroy()
         if response == Gtk.ResponseType.CANCEL:
@@ -281,17 +281,17 @@ class MainWindow(Gtk.Window):
                     sp = subprocess.Popen(shlex.split('rc-update del ntpd'), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     out, err = sp.communicate()
                 else:
-                    err = _('ntpd service not found')
+                    err = _('ntpd service not found').encode()
             else:
-                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.')
+                err = _('For this to work, ntpd needs to be present.\nAlso, you may need to edit /etc/ntp.conf (or similar) file, and then enable the ntp daemon to start at boot.\nThis feature is not handled by this program.').encode()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, _("NTP disabled!"))
-                dialog2.format_secondary_text("{0}".format(out))
+                dialog2.format_secondary_text("{0}".format(out.decode()))
                 dialog2.run()
                 dialog2.destroy()
         dialog.destroy()
@@ -301,15 +301,15 @@ class MainWindow(Gtk.Window):
             sp = subprocess.Popen(shlex.split("/usr/sbin/ntpdate -u 0.pool.ntp.org"), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = sp.communicate()
         else:
-            err = _('Could not find ntpdate')
+            err = _('Could not find ntpdate').encode()
         if err:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, msg_warn)
-            dialog2.format_secondary_text("{0}".format(err))
+            dialog2.format_secondary_text("{0}".format(err.decode()))
             dialog2.run()
             dialog2.destroy()
         else:
             dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, _("Success! Time updated."))
-            dialog2.format_secondary_text("{0}".format(out))
+            dialog2.format_secondary_text("{0}".format(out.decode()))
             dialog2.run()
             dialog2.destroy()
 
@@ -335,15 +335,15 @@ class MainWindow(Gtk.Window):
                     sp = subprocess.Popen(shlex.split("ln -sf /usr/share/zoneinfo/{0} /etc/localtime".format(entered_text)), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     out, err = sp.communicate()
                 else:
-                    err = _('Invalid timezone')
+                    err = _('Invalid timezone').encode()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, _("Timezone changed!"))
-                dialog2.format_secondary_text("{0}".format(out))
+                dialog2.format_secondary_text("{0}".format(out.decode()))
                 dialog2.run()
                 dialog2.destroy()
         dialog.destroy()
@@ -362,19 +362,19 @@ class MainWindow(Gtk.Window):
                 p2 = re.match("[0-9]*-[0-9]*-[0-9]*", "%s" % entered_text) # date, like yyyy-mm-dd
                 p3 = re.match("[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*", "%s" % entered_text) # date and time
                 p4 = re.match("[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*", "%s" % entered_text) # date and time with seconds
-		if p1 or p2 or p3 or p4:
+                if p1 or p2 or p3 or p4:
                     sp = subprocess.Popen(shlex.split("date -s '%s'" % entered_text), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     out, err = sp.communicate()
                 else:
-                    err = _('Time not entered correctly.')
+                    err = _('Time not entered correctly.').encode()
             if err:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, msg_warn)
-                dialog2.format_secondary_text("{0}".format(err))
+                dialog2.format_secondary_text("{0}".format(err.decode()))
                 dialog2.run()
                 dialog2.destroy()
             else:
                 dialog2 = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, _("Time changed!"))
-                dialog2.format_secondary_text("{0}".format(out))
+                dialog2.format_secondary_text("{0}".format(out.decode()))
                 dialog2.run()
                 dialog2.destroy()
         dialog.destroy()
@@ -458,7 +458,7 @@ class MainWindow(Gtk.Window):
         label = Gtk.Label(label=_(" 7. Read time from the hardware clock"))
         label.set_alignment(0, .5)
         grid.attach(label, Gtk.PositionType.LEFT, 7, 1, 1)
-        self.button_7 = Gtk.ToolButton(stock_id=Gtk.STOCK_ABOUT)
+        self.button_7 = Gtk.ToolButton(stock_id=Gtk.STOCK_DIALOG_INFO)
         self.button_7.set_tooltip_text(_("Read time from the hardware clock"))
         self.button_7.connect("clicked", self.read_time_from_hw_clock)
         grid.attach(self.button_7, Gtk.PositionType.RIGHT, 7, 1, 1)
