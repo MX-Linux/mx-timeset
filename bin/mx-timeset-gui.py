@@ -89,7 +89,7 @@ class on_show_timezones:
         if is_systemd():
             sp = subprocess.Popen(shlex.split('timedatectl list-timezones'), stdout=subprocess.PIPE)
         else:
-            p1 = subprocess.Popen(shlex.split('find -L /usr/share/zoneinfo/posix -mindepth 2 -type f -printf "%P\n"'), stdout=subprocess.PIPE)
+            p1 = subprocess.Popen(shlex.split('find -L /usr/share/zoneinfo -mindepth 2 ! -path \'*/posix/*\' ! -path \'*/right/*\' -type f -printf "%P\n"'), stdout=subprocess.PIPE)
             sp = subprocess.Popen(["sort"], stdin=p1.stdout, stdout=subprocess.PIPE)
         out, err = sp.communicate()
         textbuffer.set_text("{0}".format(out))
@@ -331,8 +331,8 @@ class MainWindow(Gtk.Window):
                 sp = subprocess.Popen(shlex.split("timedatectl set-timezone {0}".format(entered_text)), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 out, err = sp.communicate()
             else:
-                if os.path.isfile('/usr/share/zoneinfo/posix/{0}'.format(entered_text)):
-                    sp = subprocess.Popen(shlex.split("ln -sf /usr/share/zoneinfo/posix/{0} /etc/localtime".format(entered_text)), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                if os.path.isfile('/usr/share/zoneinfo/{0}'.format(entered_text)):
+                    sp = subprocess.Popen(shlex.split("ln -sf /usr/share/zoneinfo/{0} /etc/localtime".format(entered_text)), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     out, err = sp.communicate()
                 else:
                     err = _('Invalid timezone')
