@@ -4,13 +4,13 @@ Priority: optional
 Maintainer: Steven Pusser <stevep@mxlinux.org>
 Build-Depends: debhelper (>=9), gettext
 Standards-Version: 3.9.6
-Homepage: https://github.com/aadityabagga/timeset-gui/
+Homepage: https://github.com/MX-Linux/mx-timeset
 
 Package: mx-timeset-gui
 Architecture: all
 Conflicts: timeset-gui
 Replaces: timeset-gui
-Depends: ${misc:Depends}, python-gobject, menu, ntp
+Depends: ${misc:Depends}, python3-gi, menu, ntp
 Description: GUI for time and date settings
  A simple GUI for time and date settings.  This is a fork of the original 
  timeset-gui at https://github.com/aadityabagga/timeset-gui
