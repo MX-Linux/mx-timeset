@@ -6,5 +6,5 @@ Its a graphical interface written in python for managing system date and time. F
 
 * ntp (for synchronising time from the network)
 
-* python-gobject (python-gi in Debian)
+* python-gi
 
